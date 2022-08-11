@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store Locator</title>
+
+    <link rel="stylesheet" href="/styles/index.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;700&display=swap');
+    </style>
+</head>
+
+<body class="gc-store-locator">
+
+    <main class="gc-main">
+        <div class="gc-aside">
+            <div class="gc-aside__title">
+                <h2>Encontre a franquia mais próxima</h2>
+
+                <p>Selecione a sua cidade ou, se preferir, ativa sua localização e a gente te indica a loja mais perto:</p>
+            </div>
+
+            <div class="gc-aside__filter">
+                <form>
+                    <div class="gc-form__select">
+                        <select name="state" id="state">
+                            <option disabled="disabled" selected="selected">estado</option>
+                            <option value="AC" idUf="12">Acre</option>
+                            <option value="AL" idUf="27">Alagoas</option>
+                            <option value="AP" idUf="16">Amapá</option>
+                            <option value="AM" idUf="13">Amazonas</option>
+                            <option value="BA" idUf="29">Bahia</option>
+                            <option value="CE" idUf="23">Ceará</option>
+                            <option value="DF" idUf="53">Distrito Federal</option>
+                            <option value="ES" idUf="32">Espírito Santo</option>
+                            <option value="GO" idUf="52">Goiás</option>
+                            <option value="MA" idUf="21">Maranhão</option>
+                            <option value="MT" idUf="51">Mato Grosso</option>
+                            <option value="MS" idUf="50">Mato Grosso do Sul</option>
+                            <option value="MG" idUf="31">Minas Gerais</option>
+                            <option value="PA" idUf="15">Pará</option>
+                            <option value="PB" idUf="25">Paraíba</option>
+                            <option value="PR" idUf="41">Paraná</option>
+                            <option value="PE" idUf="26">Pernambuco</option>
+                            <option value="PI" idUf="22">Piauí</option>
+                            <option value="RJ" idUf="33">Rio de Janeiro</option>
+                            <option value="RN" idUf="24">Rio Grande do Norte</option>
+                            <option value="RS" idUf="43">Rio Grande do Sul</option>
+                            <option value="RO" idUf="11">Rondônia</option>
+                            <option value="RR" idUf="14">Roraima</option>
+                            <option value="SC" idUf="42">Santa Catarina</option>
+                            <option value="SP" idUf="35">São Paulo</option>
+                            <option value="SE" idUf="28">Sergipe</option>
+                            <option value="TO" idUf="17">Tocantins</option>
+                        </select>
+                    </div>
+
+                    <div class="gc-form__select">
+                        <select name="city" id="city">
+                            <option disabled="disabled" selected="selected">cidade</option>
+                        </select>
+                    </div>
+                </form>
+                
+                <form autocomplete="off">
+                    <div class="gc-form__input">
+                        <label for="search">Digite aqui o nome ou endereço da loja:</label>
+                        <input type="text" id="find-by-typing" name="search" />
+                    </div>
+                </form>
+
+                <button id="find-by-location">encontre a loja mais próxima</button>
+            </div>
+
+            <div class="gc-aside__result">
+                <div class="gc-aside__result--not-found x-hide">
+                    <p>Ops, não encontramos nenhuma loja aqui.</p>
+                </div>
+                <div class="gc-aside__result--found"></div>
+            </div>
+        </div>
+
+        <div class="gc-map">
+            <div class="gc-map--unloaded">
+                <img src="/assets/store-banner-desktop.png" alt="Store Banner">
+            </div>
+
+            <div class="gc-map--loaded"></div>
+        </div>
+    </main>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgc7NaRDE_vQbmh7UbnecCC5JLAVRhYxE"></script>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+    <script src="/javascript/index.js"></script>
+</body>
+</html>
